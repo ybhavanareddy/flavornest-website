@@ -6,7 +6,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-blue)
-![GitHub last commit](https://img.shields.io/github/last-commit/your-github-username/flavornest-website)
+![GitHub last commit](https://img.shields.io/github/last-commit/ybhavanareddy/flavornest-website)
+
+
 
 
 
@@ -45,12 +47,14 @@ This project showcases a clean design, interactive UI elements, and a mobile-fri
 ---
 
 ## 📂 Project Structure
+```plaintext
 flavornest-website/
 ├── index.html
 ├── style.css
 ├── script.js
 ├── images/
 └── README.md
+
 
 
 ## ⚡ How to Run Locally
