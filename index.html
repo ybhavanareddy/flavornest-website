@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorNest - Delicious Food Delivered</title>
+    <meta name="description" content="Delicious food delivery from FlavorNest - fresh, healthy meals at your doorstep.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <!-- Rellax.js for Parallax Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+</head>
+<body>
+    <!-- ===== Navbar Section ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar-main">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.jpg" alt="FlavorNest Logo" class="logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-choose-us">Why Choose Us?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu-section">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#delivery-payment">Delivery & Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#follow-us">Follow Us</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-accent toggle-button ms-3" id="darkModeToggle"> Dark/Light Mode</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Hero Banner Section ===== -->
+    <section class="hero-section rellax d-flex align-items-center text-center" id="hero-banner" data-rellax-speed="-1">
+        <div class="container">
+            <h1 class="hero-heading">Discover FlavorNest's Delicious Offerings</h1>
+            <p class="hero-caption">Fresh, Healthy, and Delivered with Care</p>
+            <button class="btn btn-primary custom-button me-2"><a class="nav-link" href="#menu-section">View Menu</a></button>
+            <button class="btn btn-outline-accent  custom-outline-button" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+        </div>
+    </section>
+
+    <!-- ===== Order Modal: Bootstrap modal for order form ===== -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Place Your Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="customerName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="customerPhone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderDetails" class="form-label">Order Details</label>
+                            <textarea class="form-control" id="orderDetails" rows="4" placeholder="Specify your order (e.g., dishes, preferences)"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary custom-button">Submit Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Why Choose Us Section ===== -->
+    <section class="why-choose-us-section section-padding" id="why-choose-us">
+        <div class="container">
+            <h2 class="section-heading text-center mb-4">Why Choose Us?</h2>
+            <p class="section-description text-center mb-5">We prioritize quality, freshness, and customer satisfaction in every meal.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card card-feature">
+                        <img src="images/foodService.jpg" class="card-img-top mx-auto" alt="Food Service" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Premium Food Service</h5>
+                            <p class="card-text">Enjoy restaurant-quality dining at home with careful packaging and presentation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card card-feature">
+                        <img src="images/freshFood.jpg" class="card-img-top mx-auto" alt="Fresh Food" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Always Fresh Ingredients</h5>
+                            <p class="card-text">Sourced directly from farms for the freshest fruits, vegetables, and produce.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card card-feature">
+                        <img src="images/discount.jpg" class="card-img-top mx-auto" alt="Best Offers" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Exclusive Offers</h5>
+                            <p class="card-text">Up to 50% off and promo codes on all orders for unbeatable value.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonials Carousel -->
+            <div id="testimonialsCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="text-center testimonial-text">"Amazing food and fast delivery! FlavorNest never disappoints." - Jane D.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-center testimonial-text">"The freshest ingredients I've ever tasted!" - John S.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-center testimonial-text">"Love the variety and quality. Highly recommend!" - Sarah M.</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Menu Section: Grid of menu categories with filters ===== -->
+    <section class="menu-section section-padding bg-white" id="menu-section">
+        <div class="container">
+            <h2 class="section-heading text-center mb-5">Our Menu</h2>
+            <!-- Menu Filters -->
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-accent me-2" onclick="filterMenu('all')">All</button>
+                <button class="btn btn-outline-accent me-2" onclick="filterMenu('veg')">Veg</button>
+                <button class="btn btn-outline-accent" onclick="filterMenu('non-veg')">Non-Veg</button>
+            </div>
+            <div class="row" id="menuItems">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card card-menu" data-category="non-veg">
+                        <img src="images/nonveg.jpg" class="card-img-top" alt="Non-Veg Starters" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Non-Veg Starters</h5>
+                            <a href="#" class="menu-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card card-menu" data-category="veg">
+                        <img src="images/vegstarter.jpg" class="card-img-top" alt="Veg Starters" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Veg Starters</h5>
+                            <a href="#" class="menu-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card card-menu" data-category="veg">
+                        <img src="images/soup.jpg" class="card-img-top" alt="Soups" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Soups</h5>
+                            <a href="#" class="menu-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card card-menu" data-category="non-veg">
+                        <img src="images/seafood.jpg" class="card-img-top" alt="Fish & Seafood" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Fish & Seafood</h5>
+                            <a href="#" class="menu-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card card-menu" data-category="non-veg">
+                        <img src="images/maincourse.jpg" class="card-img-top" alt="Main Course" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Main Course</h5>
+                            <a href="#" class="menu-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card card-menu" data-category="veg">
+                        <img src="images/noodles.jpg" class="card-img-top" alt="Noodles" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Noodles</h5>
+                            <a href="#" class="menu-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card card-menu" data-category="veg">
+                        <img src="images/salads.jpg" class="card-img-top" alt="Salads" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Salads</h5>
+                            <a href="#" class="menu-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card card-menu" data-category="veg">
+                        <img src="images/dessert.jpg" class="card-img-top" alt="Desserts" loading="lazy">
+                        <div class="card-body">
+                            <h5 class="card-title">Desserts</h5>
+                            <a href="#" class="menu-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Healthy Food Section: Promoting organic options ===== -->
+    <section class="healthy-food-section section-padding" id="healthy-food">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center mb-4 mb-md-0">
+                    <img src="images/healthyfood.jpg" class="img-fluid" alt="Healthy Food Plate" loading="lazy">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="section-heading">Fresh, Healthy, Organic Delights</h2>
+                    <p class="section-description">Embrace organic goodness with our range of fruits and vegetables, free from harmful chemicals for a healthier you.</p>
+                    <button class="btn btn-primary custom-button" data-bs-toggle="modal" data-bs-target="#videoModal">Watch Video</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Video Modal: Bootstrap modal for video playback ===== -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg"> <!-- Use modal-lg for larger size to fit video -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Our Healthy Food Story</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    
+                    <iframe width="100%" height="400" rel="0" src="https://www.youtube.com/embed/AHmbXR0IY9k?autoplay=1" title="FlavorNest Healthy Food Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ===== Delivery & Payment Section: Hassle-free options ===== -->
+    <section class="delivery-payment-section section-padding bg-white" id="delivery-payment">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7 order-md-1 mb-4 mb-md-0">
+                    <h2 class="section-heading">Seamless Delivery & Payment</h2>
+                    <p class="section-description">Multiple payment options, live tracking, and a 5% discount on online payments for every order.</p>
+                    <button class="btn btn-primary custom-button" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                    <div class="payment-icons mt-3">
+                        <img src="images/visa.jpg" alt="Visa" class="me-3" loading="lazy">
+                        <img src="images/mastercard.png" alt="MasterCard" class="me-3" loading="lazy">
+                        <img src="images/paypal.jpg" alt="PayPal" class="me-3" loading="lazy">
+                        <img src="images/americanexpress.png" alt="American Express" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-2 text-center">
+                    <img src="images/seamlessdelivery.jpg" class="img-fluid" alt="Delivery Illustration" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Thanking Customers Section ===== -->
+    <section class="thanking-customers-section section-padding" id="thanking-customers">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7 mb-4 mb-md-0">
+                    <h2 class="section-heading">Thank You for Choosing FlavorNest</h2>
+                    <p class="section-description">We appreciate your loyalty and have a special surprise for you.</p>
+                    <button class="btn btn-primary custom-button" data-bs-toggle="modal" data-bs-target="#giftModal">Redeem Gift</button>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="images/thankyou.png" class="img-fluid" alt="Thank You Gift" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Gift Redemption Modal: Bootstrap modal for redeeming a gift with voucher image ===== -->
+    <div class="modal fade" id="giftModal" tabindex="-1" aria-labelledby="giftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftModalLabel">Redeem Your Exclusive Gift</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <!-- Gift Voucher Image -->
+                <img src="images/giftVoucher.jpg" alt="Gift Voucher" class="img-fluid gift-voucher-img mb-3" loading="lazy">
+                <!-- Message -->
+                <p class="section-description">Thank you for your loyalty! Enter your email below to claim your exclusive gift, such as a 20% off voucher or a free dessert with your next order.</p>
+                <!-- Form -->
+                <form>
+                    <div class="mb-3">
+                        <label for="customerEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="customerEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerName" class="form-label">Name (Optional)</label>
+                        <input type="text" class="form-control" id="customerName" placeholder="Enter your name">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary custom-button">Claim Gift</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- ===== Follow Us Section: With Social media links ===== -->
+    <section class="follow-us-section section-padding bg-white" id="follow-us">
+        <div class="container text-center">
+            <h2 class="section-heading mb-4">Follow Us</h2>
+            <div class="social-icons">
+                <a href="#" class="social-icon me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer Section: Contact and address info ===== -->
+    <footer class="footer-section section-padding text-center" id="footer-info">
+        <div class="container">
+            <img src="images/logo.jpg" alt="FlavorNest Logo" class="mb-3 logo" loading="lazy">
+            <p class="footer-mail">order@flavornest.com</p>
+            <p class="footer-address">123 Flavor Street, Kadiri City, India</p>
+        </div>
+    </footer>
+
+    <!-- ===== Sticky CTA Button ===== -->
+    <button class="btn btn-primary custom-button sticky-cta" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+
+
+
+    <!-- ===== Alert Container: For displaying popup messages ====== -->
+    <div id="alertContainer" class="position-fixed top-0 end-0 p-3" style="z-index: 1100;"></div>
+
+
+
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Custom JS for Dark Mode Toggle, Menu Filters, and Parallax Initialization -->
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

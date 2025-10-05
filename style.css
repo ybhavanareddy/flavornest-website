@@ -1,0 +1,527 @@
+/* ===== Root Variables: To Define colors, fonts, and spacing for consistency ===== */
+:root {
+    --primary-color: #D84315; 
+    --secondary-color: #212121; 
+    --accent-color: #FF7043; 
+    --bg-light: #F9F9F9; 
+    --bg-dark: #121212; 
+    --font-main: 'Roboto', sans-serif;
+    --spacing-small: 0.5rem; 
+    --spacing-medium: 0.5rem; 
+    --spacing-large: 1.5rem; 
+    --padding-section: 5rem; 
+    --border-radius: 0.5rem; 
+    --transition: 0.3s ease; 
+}
+
+/* ===== Dark Mode Styles ===== */
+.dark-mode {
+    --bg-light: #121212;
+    --bg-dark: #F9F9F9;
+    --secondary-color: #F9F9F9;
+    color: #F9F9F9;
+}
+
+.dark-mode body {
+    background-color: var(--bg-light);
+    color: #F9F9F9;
+}
+
+.dark-mode .card {
+    background-color: #1a1a1a;
+    color: #F9F9F9;
+    border-color: #333;
+}
+
+.dark-mode .section-heading,
+.dark-mode .card-title,
+.dark-mode .hero-heading,
+.dark-mode .hero-caption,
+.dark-mode .modal-title {
+    color: #F9F9F9;
+}
+.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FF7043' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; 
+}
+.dark-mode .toggle-button{
+    color:var(--secondary-color)
+}
+.dark-mode .section-description,
+.dark-mode .card-text,
+.dark-mode .testimonial-text {
+    color: #bbb;
+}
+
+.dark-mode .menu-link {
+    color: var(--accent-color);
+}
+
+.dark-mode #navbar-main {
+    background-color: var(--bg-light) !important;
+}
+
+.dark-mode #navbar-main .nav-link {
+    color: #F9F9F9 !important;
+}
+
+.dark-mode .footer-section {
+    background-color: var(--bg-light);
+    color: #F9F9F9;
+}
+
+.dark-mode .footer-mail,
+.dark-mode .footer-address {
+    color: #F9F9F9;
+}
+
+.dark-mode .modal-content {
+    background-color: #1a1a1a;
+    color: #F9F9F9;
+}
+
+.dark-mode .modal-header,
+.dark-mode .modal-footer {
+    border-color: #333;
+}
+
+.dark-mode .form-control {
+    background-color: #2a2a2a;
+    color: #F9F9F9;
+    border-color: #444;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #888;
+}
+
+.dark-mode .social-icon {
+    background-color: #2a2a2a;
+    color: var(--accent-color);
+}
+
+.dark-mode .social-icon:hover {
+    background-color: var(--accent-color);
+    color: #1a1a1a;
+}
+
+.dark-mode .carousel-control-prev-icon,
+.dark-mode .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* ===== Global Styles ====== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Navbar Styles ===== */
+#navbar-main {
+    background-color: var(--bg-light);
+}
+
+#navbar-main .nav-link {
+    color: black;
+    font-weight: 500;
+    margin-left: var(--spacing-medium);
+    transition: var(--transition);
+}
+
+#navbar-main .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33, 33, 33, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; /* Dark gray stroke for better contrast in light mode */
+}
+.logo {
+    width: 80px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/*=== Custom Button Styles ===*/
+.custom-button {
+    height: 38px;
+    background-color: var(--primary-color) !important;
+    border: none !important;
+    color: white !important;
+    padding: var(--spacing-small) var(--spacing-large) !important;
+    transition: var(--transition);
+}
+
+.custom-button:hover {
+    background-color: var(--accent-color) !important;
+}
+
+.custom-outline-button {
+    height:38px;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    padding: var(--spacing-small) var(--spacing-large) !important;
+    transition: var(--transition);
+}
+
+.custom-outline-button:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+/* ==== Sticky CTA Button Styles ==== */
+.sticky-cta {
+    position: fixed;
+    bottom: var(--spacing-large);
+    right: var(--spacing-large);
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-small) var(--spacing-large) !important; 
+    font-size: 1rem; 
+}
+
+/* ==== Modal Styles: Styling for the order form modal ==== */
+.modal-content {
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid #e5eaf4;
+}
+
+.modal-title {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.modal-body {
+    padding: var(--spacing-large);
+}
+
+.modal-footer {
+    border-top: 1px solid #e5eaf4;
+}
+
+/* ==== Section Padding: Consistent spacing for sections ===== */
+.section-padding {
+    padding: var(--padding-section) 0;
+}
+
+/* Headings and Descriptions: Consistent typography */
+.section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.section-description {
+    font-size: 1rem;
+    color: #5a7184; /* Neutral gray for readability */
+    margin-bottom: var(--spacing-large);
+}
+
+
+/* ==== Hero Section Styles ==== */
+
+.hero-section {
+    background-image: url("images/banner.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh;  
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-heading {
+    font-size: 3rem;
+    font-weight:600;
+    margin-bottom: var(--spacing-medium);
+}
+
+.hero-caption {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-large);
+}
+
+
+
+/* ==== Why Choose Us Section Styles ==== */
+.why-choose-us-section {
+    background-color: var(--bg-light);
+}
+
+.card-feature {
+    border: 1px solid #e5eaf4;
+    border-radius: var(--border-radius);
+    background-color: white;
+    padding: var(--spacing-medium);
+    transition: var(--transition);
+}
+
+.card-feature:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.card-feature img {
+    width: 87px;
+    height: 90px;
+    margin-bottom: var(--spacing-medium);
+}
+
+.card-title {
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #7b8794;
+}
+
+.testimonial-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--secondary-color);
+    padding: var(--spacing-medium);
+}
+
+/* ==== Menu Section Styles ==== */
+.menu-section {
+    background-color: var(--bg-dark);
+}
+
+.card-menu {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card-menu:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.card-menu img {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    height: 200px;
+}
+
+.menu-link {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* ==== Carousel Arrow Icons ==== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212121'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important; /* Dark fill color using --secondary-color */
+    width: 2rem; 
+    height: 2rem;
+    background-size: contain;
+}
+
+/* Rotate for next arrow */
+.carousel-control-next-icon {
+    transform: rotate(180deg); 
+}
+
+/* ===== Healthy Food Section Styles: Light background ===== */
+.healthy-food-section {
+    background-color: var(--bg-light);
+}
+
+/* ==== Video Modal Styles ===== */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsiveness */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ===== Delivery & Payment Section Styles: White background ===== */
+.delivery-payment-section {
+    background-color: white;
+}
+
+.payment-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ===== Thanking Customers Section Styles: Subtle accent background ===== */
+.thanking-customers-section {
+    background-color: var(--bg-light);
+}
+
+/* ===== Follow Us Section Styles: White background with icons ===== */
+.follow-us-section {
+    background-color: white;
+}
+
+.social-icons .social-icon {
+    background-color: #faf7e8; 
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.social-icons .social-icon:hover {
+    background-color: var(--accent-color);
+    color: rgb(15, 13, 13);
+}
+
+/* ===== Footer Section Styles: Dark background ===== */
+.footer-section {
+    background-color: var(--bg-light);
+    color: #0d0d0e;
+}
+
+.footer-mail {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: var(--spacing-medium);
+}
+
+.footer-address {
+    font-size: 0.875rem;
+}
+
+/* ==== Alert Container Styles ==== */
+
+#alertContainer {
+    z-index: 1100; 
+    width: 90%; 
+    max-width: 400px; 
+    top: var(--spacing-medium); 
+    right: var(--spacing-medium); 
+}
+
+/* Modal Body Styles: Control overflow and padding for forms */
+#giftModal .modal-body,
+#orderModal .modal-body {
+    max-height: 60vh; 
+    overflow-y: auto; 
+    padding: var(--spacing-medium); 
+}
+
+
+.gift-voucher-img {
+    max-width: 150px; /* Smaller image for mobile */
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsiveness: Media queries for tablet and mobile */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh; 
+        background-position: center 20%; 
+    }
+
+    .hero-heading {
+        font-size: 2.5rem;
+    }
+
+    .hero-caption {
+        font-size: 1.25rem;
+    }
+
+    .section-heading {
+        font-size: 1.75rem;
+    }
+
+    .section-padding {
+        padding: 3rem 0;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+}
+
+/* ===== Mobile ==== */
+@media (max-width: 576px) {
+    .hero-section {
+        height: 70vh; 
+        background-position: center 20%; 
+    }
+    .navbar-toggler-icon {
+        filter: brightness(0.5); 
+    }
+    #alertContainer {
+        width: 85%; 
+        right: var(--spacing-small);
+        top: var(--spacing-small);
+    }
+    .alert {
+        font-size: 0.85rem; 
+        padding: var(--spacing-small); 
+        margin-bottom: var(--spacing-small); 
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 1.5rem; 
+        height: 1.5rem;
+    }
+    
+    #giftModal .modal-body,
+    #orderModal .modal-body {
+        max-height: 50vh; 
+        padding: var(--spacing-small); 
+    }
+    .gift-voucher-img {
+        max-width: 120px; 
+    }
+    
+}
