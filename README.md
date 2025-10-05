@@ -54,7 +54,7 @@ flavornest-website/
 ├── script.js
 ├── images/
 └── README.md
-
+```
 
 
 ## ⚡ How to Run Locally
