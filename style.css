@@ -465,7 +465,7 @@ body {
 /* Responsiveness: Media queries for tablet and mobile */
 @media (max-width: 768px) {
     .hero-section {
-        height: 80vh; 
+         
         background-position: center 20%; 
     }
 
@@ -493,7 +493,6 @@ body {
 /* ===== Mobile ==== */
 @media (max-width: 576px) {
     .hero-section {
-        height: 70vh; 
         background-position: center 20%; 
     }
     .navbar-toggler-icon {
