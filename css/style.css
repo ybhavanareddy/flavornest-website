@@ -223,7 +223,7 @@ body {
 
 .section-description {
     font-size: 1rem;
-    color: #5a7184; /* Neutral gray for readability */
+    color: #5a7184;
     margin-bottom: var(--spacing-large);
 }
 
@@ -465,7 +465,6 @@ body {
 /* Responsiveness: Media queries for tablet and mobile */
 @media (max-width: 768px) {
     .hero-section {
-         
         background-position: center 20%; 
     }
 
