@@ -9,11 +9,13 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ybhavanareddy/flavornest-website)
 
 
+# 🌟 Project Overview
 
 
+FlavorNest is a responsive restaurant landing page built using HTML, CSS, Bootstrap, and JavaScript.
+The project focuses on building a clean UI, consistent styling system, responsive layout, and interactive user experience.
 
-A simple and responsive **restaurant website** built with **HTML, CSS, Bootstrap, and JavaScript**.  
-This project showcases a clean design, interactive UI elements, and a mobile-friendly layout.  
+It demonstrates core frontend development concepts including layout design, DOM manipulation, responsive design, animations, and UI micro-interactions. 
 
 ---
 
@@ -31,28 +33,64 @@ This project showcases a clean design, interactive UI elements, and a mobile-fri
 | 🎨 **CSS3**  | Styling and responsive design |
 | ⚡ **Bootstrap 5** | Layout, components, and responsiveness |
 | ✨ **JavaScript (ES6)** | Interactivity (modals, filtering, dark mode) |
+|☁️ **Vercel**    | Deployment platform|
 
 ---
 
 ## ✨ Features
-✔️ Responsive Navbar & Hero Section  
-✔️ Interactive **Order Modal** with form inputs  
-✔️ **Menu Section** with Veg / Non-Veg / All filters  
-✔️ Customer **Testimonials Carousel**  
-✔️ Embedded **Video Modal** (Healthy Food section)  
-✔️ Dark/Light Mode Toggle 🌙☀️  
-✔️ Sticky **Order Now** Button  
-✔️ Social Media Links & Footer  
+
+### UI & Layout
+
+✔️ Responsive Navbar with mobile hamburger menu
+✔️ Hero banner with call-to-action buttons
+✔️ Consistent design system (colors, spacing, typography)
+
+### Interactivity
+
+✔️ Dark / Light Mode Toggle 🌙☀️
+✔️ Active Navbar Highlight while scrolling
+✔️ Scroll animations using Intersection Observer
+✔️ Menu filtering (Veg / Non-Veg / All)
+
+### Components
+
+✔️ Order Form Modal
+✔️ Video Modal (Healthy Food Section)
+✔️ Testimonials Carousel
+✔️ Sticky "Order Now" floating button
+
+### Micro-Interactions
+
+✔️ Card hover animations
+✔️ Image zoom effects
+✔️ Smooth UI transitions
+
+### 📱 Responsive Design
+
+The website is fully responsive and optimized for:
+
+💻 Desktop
+
+📱 Mobile
+
+Bootstrap grid system and custom media queries ensure consistent layout across devices.
 
 ---
 
 ## 📂 Project Structure
 ```plaintext
 flavornest-website/
+│
 ├── index.html
-├── style.css
-├── script.js
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
 ├── images/
+│
 └── README.md
 ```
 
@@ -69,9 +107,48 @@ flavornest-website/
     ```
 3. Open index.html in your browser 🚀
 
+## 💡 Key Concepts Implemented
+
+- This project demonstrates several important frontend concepts:
+
+- Semantic HTML structure
+
+- CSS design system using variables
+
+- Responsive layout with Bootstrap grid
+
+- Dark mode implementation
+
+- DOM manipulation with JavaScript
+
+- Event handling
+
+- LocalStorage usage
+
+- Scroll-based animations
+
+- UI micro-interactions
+
+## 📸 Screenshots
+
+### Desktop View
+
+![Homepage](screenshots/homepage.png)
+![Menu](screenshots/menu.png)
+
+### Mobile View
+![Mobile](screenshots/mobile.png)
 
 ## 🤝 Contribution
-Contributions are welcome! Please open an issue or submit a pull request.
+
+Contributions are welcome!
+If you would like to improve the project:
+
+1.Fork the repository
+
+2.Create a new branch
+
+3.Submit a pull request
 
 
 ## 📜 License
@@ -79,7 +156,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 
 ### 👩‍💻 Author
+ 
+## Yatham Bhavana
 
-### Developed with ❤️ by Bhavana
 🔗 LinkedIn
  http://www.linkedin.com/in/yatham-bhavana 
