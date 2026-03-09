@@ -1,16 +1,35 @@
 // Dark Mode Toggle with localStorage
-    document.getElementById('darkModeToggle').addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-    });
+const toggle = document.getElementById("darkModeToggle");
+const icon = toggle.querySelector("i");
+
+toggle.addEventListener("click", () => {
+
+document.body.classList.toggle("dark-mode");
+
+// Save preference
+if(document.body.classList.contains("dark-mode")){
+localStorage.setItem("darkMode","enabled");
+icon.classList.remove("fa-moon");
+icon.classList.add("fa-sun");
+}else{
+localStorage.setItem("darkMode","disabled");
+icon.classList.remove("fa-sun");
+icon.classList.add("fa-moon");
+}
+
+});
+
 
 // Applying saved dark mode preference on page load
-    window.addEventListener('DOMContentLoaded', function() {
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-        }
-    });
+    window.addEventListener("DOMContentLoaded", () => {
+
+if(localStorage.getItem("darkMode") === "enabled"){
+document.body.classList.add("dark-mode");
+icon.classList.remove("fa-moon");
+icon.classList.add("fa-sun");
+}
+
+});
 
 // Menu Filters
     function filterMenu(category) {
@@ -73,3 +92,63 @@
             showAlert('Please enter a valid email address.', 'danger');
         }
     });
+
+
+
+    /* =====================================================
+   ACTIVE NAVBAR LINK ON SCROLL
+   ===================================================== */
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+window.addEventListener("scroll", () => {
+
+let currentSection = "";
+
+sections.forEach(section => {
+
+const sectionTop = section.offsetTop - 120;
+const sectionHeight = section.clientHeight;
+
+if (window.scrollY >= sectionTop) {
+currentSection = section.getAttribute("id");
+}
+
+});
+
+navLinks.forEach(link => {
+
+link.classList.remove("active");
+
+if (link.getAttribute("href").includes(currentSection)) {
+link.classList.add("active");
+}
+
+});
+
+});
+
+/* =====================================================
+   SCROLL ANIMATION
+   ===================================================== */
+
+const fadeElements = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+},{threshold:0.2});
+
+fadeElements.forEach(el=>{
+observer.observe(el);
+});
+
+
