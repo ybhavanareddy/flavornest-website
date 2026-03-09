@@ -19,6 +19,12 @@ It demonstrates core frontend development concepts including layout design, DOM 
 
 ---
 
+## 🎯 Why I Built This Project
+
+I built this project while revisiting my web development fundamentals.
+The goal was to strengthen my understanding of HTML, CSS, Bootstrap, and JavaScript by creating a responsive restaurant website with interactive UI elements.
+
+
 ## 🚀 Live Demo
 🔗 [View Website](https://flavornest-website-ka6a.vercel.app/)  
 
@@ -41,29 +47,29 @@ It demonstrates core frontend development concepts including layout design, DOM 
 
 ### UI & Layout
 
-✔️ Responsive Navbar with mobile hamburger menu
-✔️ Hero banner with call-to-action buttons
-✔️ Consistent design system (colors, spacing, typography)
+- Responsive Navbar with mobile hamburger menu
+- Hero banner with call-to-action buttons
+- Consistent design system (colors, spacing, typography)
 
 ### Interactivity
 
-✔️ Dark / Light Mode Toggle 🌙☀️
-✔️ Active Navbar Highlight while scrolling
-✔️ Scroll animations using Intersection Observer
-✔️ Menu filtering (Veg / Non-Veg / All)
+- Dark / Light Mode Toggle 🌙☀️
+-  Active Navbar Highlight while scrolling
+- Scroll animations using Intersection Observer
+-  Menu filtering (Veg / Non-Veg / All)
 
 ### Components
 
-✔️ Order Form Modal
-✔️ Video Modal (Healthy Food Section)
-✔️ Testimonials Carousel
-✔️ Sticky "Order Now" floating button
+- Order Form Modal
+- Video Modal (Healthy Food Section)
+- Testimonials Carousel
+- Sticky "Order Now" floating button
 
 ### Micro-Interactions
 
-✔️ Card hover animations
-✔️ Image zoom effects
-✔️ Smooth UI transitions
+- Card hover animations
+- Image zoom effects
+- Smooth UI transitions
 
 ### 📱 Responsive Design
 
